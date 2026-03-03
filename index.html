@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta name="description" content="Barnabas World : Le portail mondial avec plus de 500 sites de sport, NBA, banques, divertissement et tech.">
+<meta name="keywords" content="Barnabas, Annuaire, Sites Mondiaux, NBA, Paris Sportifs, Streaming">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnabas World - 300+ Sites Mondiaux</title><link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2815/2815428.png">
+    <style><link rel="manifest" href="manifest.json">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; }
+        
+        /* Barre de recherche fixe */
+        nav { background: #1e293b; padding: 15px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-align: center; }
+        #searchBar { width: 80%; max-width: 600px; padding: 12px; border-radius: 25px; border: none; font-size: 1rem; outline: none; }
+
+        .container { padding: 20px; max-width: 1400px; margin: 0 auto; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 30px; font-size: 2rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
+        
+        /* Style des boutons sites avec logo */
+        .site-card { 
+            background: #1e293b; 
+            padding: 12px; 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+            color: #cbd5e1; 
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+        .site-card:hover { background: #334155; border-color: #38bdf8; color: white; transform: scale(1.05); }
+        
+        .site-card img { 
+            width: 24px; 
+            height: 24px; 
+            margin-right: 12px; 
+            border-radius: 4px;
+            background: white; /* Pour voir les logos transparents */
+        }
+
+        .category-title { grid-column: 1 / -1; margin-top: 30px; color: #38bdf8; border-left: 4px solid #38bdf8; padding-left: 10px; font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+    <nav><input type="text" id="searchBar" placeholder="Rechercher un site (NBA, Netflix, Banque...)" onkeyup="search()"></nav>
+    <div class="container">
+        <h1>Barnabas World : Portail Universel</h1>
+        <div class="grid" id="siteGrid"><h2 class="category-title">🏀 Sport & NBA</h2>
+            <a href="https://www.nba.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=nba.com">NBA</a>
+            <a href="https://www.espn.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=espn.com">ESPN</a>
+            <a href="https://www.lequipe.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=lequipe.fr">L'Équipe</a>
+            <a href="https://www.fifa.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=fifa.com">FIFA</a>
+            <a href="https://www.beinsports.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=beinsports.com">beIN Sports</a>
+
+            <h2 class="category-title">🎬 Cinéma & Télé Réalité</h2>
+            <a href="https://www.netflix.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=netflix.com">Netflix</a>
+            <a href="https://www.disneyplus.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=disneyplus.com">Disney+</a>
+            <a href="https://www.tf1.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tf1.fr">TF1 (Télé Réalité)</a>
+            <a href="https://www.m6.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=6play.fr">M6 / 6Play</a>
+            <a href="https://www.canalplus.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=canalplus.com">Canal+</a>
+
+            <h2 class="category-title">💰 Banques & Business</h2>
+            <a href="https://www.revolut.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=revolut.com">Revolut</a>
+            <a href="https://www.paypal.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=paypal.com">PayPal</a>
+            <a href="https://www.boursorama.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=boursorama.com">Boursorama</a>
+            <a href="https://www.bnpparibas.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=bnpparibas.fr">BNP Paribas</a>
+
+            <h2 class="category-title">🔞 Paris & 18+</h2>
+            <a href="https://www.betclic.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=betclic.fr">Betclic</a>
+            <a href="https://www.winamax.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=winamax.fr">Winamax</a>
+            <a href="https://www.unibet.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=unibet.fr">Unibet</a>
+
+        </div>
+    </div>
+
+    <script>
+        function search() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let cards = document.getElementsByClassName('site-card');
+            for (let i = 0; i < cards.length; i++) {
+                if (!cards[i].innerText.toLowerCase().includes(input)) {
+                    cards[i].style.display = "none";
+                } else {
+                    cards[i].style.display = "flex";
+                }
+            }
+        }
+    </script>
+</body>
+</html><h2 class="category-title">🌟 Stars & Célébrités Mondial</h2>
+
+<a href="https://www.instagram.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=instagram.com">Instagram Stars</a>
+<a href="https://www.tiktok.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tiktok.com">TikTok Celebs</a>
+<a href="https://www.twitter.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=x.com">X / Twitter News</a>
+
+<a href="https://www.nba.com/players" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=nba.com">NBA Players List</a>
+<a href="https://www.lebronjames.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=lebronjames.com">LeBron James</a>
+<a href="https://www.stephencurry30.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=stephencurry30.com">Stephen Curry</a>
+<a href="https://www.nike.com/jordan" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=nike.com">Michael Jordan</a>
+
+<a href="https://www.cristianoronaldo.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=cristianoronaldo.com">Cristiano Ronaldo</a>
+<a href="https://www.messi.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=messi.com">Lionel Messi</a>
+<a href="https://www.neymarjr.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=neymarjr.com">Neymar Jr</a>
+<a href="https://www.kmbappe.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=kmbappe.com">Kylian Mbappé</a>
+
+<a href="https://www.taylorswift.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=taylorswift.com">Taylor Swift</a>
+<a href="https://www.beyonce.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=beyonce.com">Beyoncé</a>
+<a href="https://www.drakeofficial.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=drakeofficial.com">Drake</a>
+<a href="https://www.rihanna.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=rihanna.com">Rihanna</a>
+<a href="https://www.justinbiebermusic.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=justinbiebermusic.com">Justin Bieber</a>
+<a href="https://www.theweeknd.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=theweeknd.com">The Weeknd</a>
+
+<a href="https://www.tmz.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tmz.com">TMZ (Actu Stars)</a>
+<a href="https://www.eonline.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=eonline.com">E! Online</a>
+<a href="https://www.people.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=people.com">People Magazine</a>
+<a href="https://www.vogue.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=vogue.com">Vogue (Mode)</a>
+<a href="https://www.hollywoodreporter.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=hollywoodreporter.com">Hollywood Reporter</a>
+<a href="https://www.billboard.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=billboard.com">Billboard Charts</a>
+
+<a href="https://www.rockwell-official.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=therock.com">Dwayne Johnson</a>
+<a href="https://www.tomcruise.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tomcruise.com">Tom Cruise</a>
+<a href="https://www.willsmith.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=willsmith.com">Will Smith</a><h2 class="category-title">💰 Banques & Finance</h2>
+
+<a href="https://www.revolut.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=revolut.com">Revolut</a>
+<a href="https://www.n26.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=n26.com">N26</a>
+<a href="https://www.paypal.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=paypal.com">PayPal</a>
+<a href="https://www.wise.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=wise.com">Wise (Transfert)</a>
+<a href="https://www.westernunion.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=westernunion.com">Western Union</a>
+<a href="https://www.skrill.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=skrill.com">Skrill</a>
+<a href="https://www.payoneer.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=payoneer.com">Payoneer</a>
+
+<a href="https://www.bnpparibas.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=bnpparibas.fr">BNP Paribas</a>
+<a href="https://www.societegenerale.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=societegenerale.fr">Société Générale</a>
+<a href="https://www.credit-agricole.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=credit-agricole.fr">Crédit Agricole</a>
+<a href="https://www.hsbc.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=hsbc.com">HSBC Global</a>
+<a<h2 class="category-title">📚 Éducation & Savoir</h2>
+
+<a href="https://www.coursera.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=coursera.org">Coursera</a>
+<a href="https://www.udemy.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=udemy.com">Udemy</a>
+<a href="https://www.edx.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=edx.org">edX (MIT/Harvard)</a>
+<a href="https://www.khanacademy.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=khanacademy.org">Khan Academy</a>
+<a href="https://www.duolingo.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=duolingo.com">Duolingo (Langues)</a>
+<a href="https://www.openclassrooms.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=openclassrooms.com">OpenClassrooms</a>
+<a href="https://www.ted.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=ted.com">TED Talks</a>
+<a href="https://www.wikipedia.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=wikipedia.org">Wikipedia</a>
+
+<a href="https://www.scribd.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=scribd.com">Scribd</a>
+<a href="https://www.grammarly.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=grammarly.com">Grammarly</a>
+<a href="https://www.researchgate.net" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=researchgate.net">ResearchGate</a>
+<a href="https://www.scholar.google.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com">Google Scholar</a>
+
+<h2 class="category-title">✈️ Tourisme & Voyages</h2>
+
+<a href="https://www.booking.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=booking.com">Booking.com</a>
+<a href="https://www.airbnb.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=airbnb.com">Airbnb</a>
+<a href="https://www.hotels.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=hotels.com">Hotels.com</a>
+<a href="https://www.trivago.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=trivago.com">Trivago</a>
+
+<a href="https://www.skyscanner.net" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=skyscanner.net">Skyscanner</a>
+<a href="https://www.kayak.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=kayak.com">Kayak</a>
+<a href="https://www.google.com/travel/flights" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com">Google Flights</a>
+<a href="https://www.expedia.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=expedia.com">Expedia</a>
+<a href="https://www.opodo.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=opodo.com">Opodo</a>
+
+<a href="https://www.tripadvisor.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tripadvisor.com">TripAdvisor</a>
+<a href="https://www.lonelyplanet.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=lonelyplanet.com">Lonely Planet</a>
+<a href="https://www.routard.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=routard.com">Le Routard</a>
+<a href="https://www.nationalgeographic.com/travel" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=nationalgeographic.com">NatGeo Travel</a>
+
+<a href="https://www.hertz.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=hertz.com">Hertz (Voitures)</a>
+<a href="https://www.uber.com" class=<h2 class="category-title">🤖 Tech & Intelligence Artificielle</h2>
+
+<a href="https://chatgpt.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=openai.com">ChatGPT</a>
+<a href="https://gemini.google.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=google.com">Google Gemini</a>
+<a href="https://claude.ai" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=anthropic.com">Claude AI</a>
+<a href="https://www.midjourney.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=midjourney.com">Midjourney (Images)</a>
+<a href="https://www.perplexity.ai" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=perplexity.ai">Perplexity</a>
+
+<a href="https://github.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=github.com">GitHub</a>
+<a href="https://stackoverflow.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=stackoverflow.com">Stack Overflow</a>
+<a href="https://www.w3schools.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=w3schools.com">W3Schools (Apprendre)</a>
+<a href="https://www.netlify.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=netlify.com">Netlify</a>
+
+<a href="https://www.theverge.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=theverge.com">The Verge</a>
+<a href="https://www.techcrunch.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=techcrunch.com">TechCrunch</a>
+<a href="https://www.wired.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=wired.com">Wired</a>
+<a href="https://www.cnet.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=cnet.com">CNET</a>
+
+<h2 class="category-title">🏥 Santé & Bien-être</h2>
+
+<a href="https://www.doctolib.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=doctolib.fr">Doctolib</a>
+<a href="https://www.who.int" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=who.int">OMS (Santé Mondiale)</a>
+<a href="https://www.mayoclinic.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=mayoclinic.org">Mayo Clinic</a>
+<a href="https://www.webmd.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=webmd.com">WebMD</a>
+<a href="https://www.healthline.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=healthline.com">Healthline</a>
+
+<a href="https://www.myfitnesspal.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=myfitnesspal.com">MyFitnessPal</a>
+<a href="https://www.strava.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=strava.com">Strava (Sport)</a>
+<a href="https://www.headspace.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=headspace.com">Headspace (Méditation)</a>
+<a href="https://www.calm.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=calm.com">Calm</a>
+<a href="https://www.psychologytoday.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=psychologytoday.com">Psychology Today</a><h2 class="category-title">🌍 Information Mondiale</h2>
+
+<a href="https://www.bbc.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=bbc.com">BBC World</a>
+<a href="https://www.cnn.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=cnn.com">CNN International</a>
+<a href="https://www.aljazeera.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=aljazeera.com">Al Jazeera</a>
+<a href="https://www.reuters.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=reuters.com">Reuters</a>
+<a href="https://www.lemonde.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=lemonde.fr">Le Monde</a>
+<a href="https://www.france24.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=france24.com">France 24</a>
+<a href="https://www.nytimes.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=nytimes.com">The New York Times</a>
+<a href="https://www.theguardian.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=theguardian.com">The Guardian</a>
+
+<h2 class="category-title">🎨 Design & Créativité</h2>
+
+<a href="https://www.canva.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=canva.com">Canva</a>
+<a href="https://www.adobe.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=adobe.com">Adobe Creative Cloud</a>
+<a href="https://www.figma.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=figma.com">Figma</a>
+<a href="https://www.behance.net" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=behance.net">Behance</a>
+<a href="https://www.pinterest.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=pinterest.com">Pinterest</a>
+<a href="https://www.houzz.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=houzz.com">Houzz (Architecture)</a>
+<a href="https://www.archdaily.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=archdaily.com">ArchDaily</a>
+
+<h2 class="category-title">🏁 Paris Sportifs & Jeux</h2>
+
+<a href="https://www.betfair.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=betfair.com">Betfair</a>
+<a href="https://www.paddypower.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=paddypower.com">Paddy Power</a>
+<a href="https://www.888casino.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=888casino.com">888 Casino</a>
+<a href="https://www.ladbrokes.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=ladbrokes.com">Ladbrokes</a>
+<a href="https://www.vbet.fr" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=vbet.fr">Vbet</a>
+
+<h2 class="category-title">🔞 Contenus Adultes (+18)</h2>
+
+<a href="https://www.pornhub.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=pornhub.com">Pornhub</a>
+<a href="https://www.xvideos.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=xvideos.com">XVideos</a>
+<a href="https://www.xnxx.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=xnxx.com">XNXX</a>
+<a href="https://www.redtube.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=redtube.com">RedTube</a>
+<a href="https://www.youporn.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=youporn.com">YouPorn</a>
+<a href="https://www.onlyfans.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=onlyfans.com">OnlyFans</a>
+<a href="https://www.chaturba<h2 class="category-title">💬 Réseaux Sociaux & Messagerie</h2>
+
+<a href="https://www.facebook.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=facebook.com">Facebook</a>
+<a href="https://www.instagram.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=instagram.com">Instagram</a>
+<a href="https://www.threads.net" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=threads.net">Threads</a>
+<a href="https://www.tiktok.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=tiktok.com">TikTok</a>
+<a href="https://www.snapchat.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=snapchat.com">Snapchat</a>
+<a href="https://www.linkedin.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=linkedin.com">LinkedIn</a>
+<a href="https://www.reddit.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=reddit.com">Reddit</a>
+<a href="https://www.pinterest.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=pinterest.com">Pinterest</a>
+
+<a href="https://web.whatsapp.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=whatsapp.com">WhatsApp Web</a>
+<a href="https://web.telegram.org" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=telegram.org">Telegram</a>
+<a href="https://www.messenger.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=messenger.com">Messenger</a>
+<a href="https://discord.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=discord.com">Discord</a>
+<a href="https://www.skype.com" class="site-card" target="_blank"><img src="https://www.google.com/s2/favicons?domain=skype.com">Skype</a>
+
+</div> </div> <script>
+        // Fonction de recherche instantanée
+        function search() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let cards = document.getElementsByClassName('site-card');
+            let titles = document.getElementsByClassName('category-title');
+
+            for (let i = 0; i < cards.length; i++) {
+                if (!cards[i].innerText.toLowerCase().includes(input)) {
+                    cards[i].style.display = "none";
+                } else {
+                    cards[i].style.display = "flex";
+                }
+            }
+
+            // Cache les titres si on fait une recherche pour y voir plus clair
+            for (let j = 0; j < titles.length; j++) {
+                if (input.length > 0) {
+                    titles[j].style.display = "none";
+                } else {
+                    titles[j].style.display = "block";
+                }
+            }
+        }
+    </script><script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+</body>
+</html>
